@@ -16,6 +16,15 @@
 		1A618C892ACF092600115563 /* McRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A618C882ACF092600115563 /* McRadarTests.swift */; };
 		1A618C932ACF092600115563 /* McRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A618C922ACF092600115563 /* McRadarUITests.swift */; };
 		1A618C952ACF092600115563 /* McRadarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A618C942ACF092600115563 /* McRadarUITestsLaunchTests.swift */; };
+		1A618CA82ACF099D00115563 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A618CA72ACF099D00115563 /* WidgetKit.framework */; };
+		1A618CAA2ACF099D00115563 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A618CA92ACF099D00115563 /* SwiftUI.framework */; };
+		1A618CAD2ACF099D00115563 /* McWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A618CAC2ACF099D00115563 /* McWidgetBundle.swift */; };
+		1A618CAF2ACF099D00115563 /* McWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A618CAE2ACF099D00115563 /* McWidgetLiveActivity.swift */; };
+		1A618CB12ACF099D00115563 /* McWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A618CB02ACF099D00115563 /* McWidget.swift */; };
+		1A618CB42ACF099E00115563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A618CB32ACF099E00115563 /* Assets.xcassets */; };
+		1A618CB62ACF099E00115563 /* McWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1A618CB22ACF099D00115563 /* McWidget.intentdefinition */; };
+		1A618CB72ACF099E00115563 /* McWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1A618CB22ACF099D00115563 /* McWidget.intentdefinition */; };
+		1A618CBA2ACF099E00115563 /* McWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1A618CA52ACF099D00115563 /* McWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +42,28 @@
 			remoteGlobalIDString = 1A618C6D2ACF092500115563;
 			remoteInfo = McRadar;
 		};
+		1A618CB82ACF099E00115563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A618C662ACF092500115563 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A618CA42ACF099D00115563;
+			remoteInfo = McWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A618CBE2ACF099E00115563 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1A618CBA2ACF099E00115563 /* McWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1A618C6E2ACF092500115563 /* McRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +79,15 @@
 		1A618C8E2ACF092600115563 /* McRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A618C922ACF092600115563 /* McRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McRadarUITests.swift; sourceTree = "<group>"; };
 		1A618C942ACF092600115563 /* McRadarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McRadarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A618CA52ACF099D00115563 /* McWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = McWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A618CA72ACF099D00115563 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1A618CA92ACF099D00115563 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1A618CAC2ACF099D00115563 /* McWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McWidgetBundle.swift; sourceTree = "<group>"; };
+		1A618CAE2ACF099D00115563 /* McWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		1A618CB02ACF099D00115563 /* McWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McWidget.swift; sourceTree = "<group>"; };
+		1A618CB22ACF099D00115563 /* McWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = McWidget.intentdefinition; sourceTree = "<group>"; };
+		1A618CB32ACF099E00115563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A618CB52ACF099E00115563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +112,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A618CA22ACF099D00115563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A618CAA2ACF099D00115563 /* SwiftUI.framework in Frameworks */,
+				1A618CA82ACF099D00115563 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +130,8 @@
 				1A618C702ACF092500115563 /* McRadar */,
 				1A618C872ACF092600115563 /* McRadarTests */,
 				1A618C912ACF092600115563 /* McRadarUITests */,
+				1A618CAB2ACF099D00115563 /* McWidget */,
+				1A618CA62ACF099D00115563 /* Frameworks */,
 				1A618C6F2ACF092500115563 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +142,7 @@
 				1A618C6E2ACF092500115563 /* McRadar.app */,
 				1A618C842ACF092600115563 /* McRadarTests.xctest */,
 				1A618C8E2ACF092600115563 /* McRadarUITests.xctest */,
+				1A618CA52ACF099D00115563 /* McWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +178,28 @@
 			path = McRadarUITests;
 			sourceTree = "<group>";
 		};
+		1A618CA62ACF099D00115563 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A618CA72ACF099D00115563 /* WidgetKit.framework */,
+				1A618CA92ACF099D00115563 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A618CAB2ACF099D00115563 /* McWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1A618CAC2ACF099D00115563 /* McWidgetBundle.swift */,
+				1A618CAE2ACF099D00115563 /* McWidgetLiveActivity.swift */,
+				1A618CB02ACF099D00115563 /* McWidget.swift */,
+				1A618CB22ACF099D00115563 /* McWidget.intentdefinition */,
+				1A618CB32ACF099E00115563 /* Assets.xcassets */,
+				1A618CB52ACF099E00115563 /* Info.plist */,
+			);
+			path = McWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +210,12 @@
 				1A618C6A2ACF092500115563 /* Sources */,
 				1A618C6B2ACF092500115563 /* Frameworks */,
 				1A618C6C2ACF092500115563 /* Resources */,
+				1A618CBE2ACF099E00115563 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1A618CB92ACF099E00115563 /* PBXTargetDependency */,
 			);
 			name = McRadar;
 			productName = McRadar;
@@ -183,6 +258,23 @@
 			productReference = 1A618C8E2ACF092600115563 /* McRadarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1A618CA42ACF099D00115563 /* McWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A618CBB2ACF099E00115563 /* Build configuration list for PBXNativeTarget "McWidgetExtension" */;
+			buildPhases = (
+				1A618CA12ACF099D00115563 /* Sources */,
+				1A618CA22ACF099D00115563 /* Frameworks */,
+				1A618CA32ACF099D00115563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = McWidgetExtension;
+			productName = McWidgetExtension;
+			productReference = 1A618CA52ACF099D00115563 /* McWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +296,9 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 1A618C6D2ACF092500115563;
 					};
+					1A618CA42ACF099D00115563 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 1A618C692ACF092500115563 /* Build configuration list for PBXProject "McRadar" */;
@@ -222,6 +317,7 @@
 				1A618C6D2ACF092500115563 /* McRadar */,
 				1A618C832ACF092600115563 /* McRadarTests */,
 				1A618C8D2ACF092600115563 /* McRadarUITests */,
+				1A618CA42ACF099D00115563 /* McWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +347,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A618CA32ACF099D00115563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A618CB42ACF099E00115563 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,6 +364,7 @@
 			files = (
 				1A618C762ACF092500115563 /* ViewController.swift in Sources */,
 				1A618C722ACF092500115563 /* AppDelegate.swift in Sources */,
+				1A618CB72ACF099E00115563 /* McWidget.intentdefinition in Sources */,
 				1A618C742ACF092500115563 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +386,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A618CA12ACF099D00115563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A618CAF2ACF099D00115563 /* McWidgetLiveActivity.swift in Sources */,
+				1A618CB12ACF099D00115563 /* McWidget.swift in Sources */,
+				1A618CB62ACF099E00115563 /* McWidget.intentdefinition in Sources */,
+				1A618CAD2ACF099D00115563 /* McWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +409,11 @@
 			isa = PBXTargetDependency;
 			target = 1A618C6D2ACF092500115563 /* McRadar */;
 			targetProxy = 1A618C8F2ACF092600115563 /* PBXContainerItemProxy */;
+		};
+		1A618CB92ACF099E00115563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A618CA42ACF099D00115563 /* McWidgetExtension */;
+			targetProxy = 1A618CB82ACF099E00115563 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +554,7 @@
 		1A618C992ACF092600115563 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +583,7 @@
 		1A618C9A2ACF092600115563 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -562,6 +685,60 @@
 			};
 			name = Release;
 		};
+		1A618CBC2ACF099E00115563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4FV8TVZ7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = McWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = McWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Christoffyw.McRadar.McWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A618CBD2ACF099E00115563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4FV8TVZ7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = McWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = McWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Christoffyw.McRadar.McWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,6 +774,15 @@
 			buildConfigurations = (
 				1A618C9F2ACF092600115563 /* Debug */,
 				1A618CA02ACF092600115563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A618CBB2ACF099E00115563 /* Build configuration list for PBXNativeTarget "McWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A618CBC2ACF099E00115563 /* Debug */,
+				1A618CBD2ACF099E00115563 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
