@@ -5,6 +5,7 @@ import type { Coordinate } from 'ol/coordinate'
 import { fromLonLat } from 'ol/proj'; // Import the fromLonLat function
 import  requestMCD from '../scripts/places_api.ts';
 import test_data from '@/scripts/example_data';
+import { OlSourceTileArcGISRest } from 'node_modules/vue3-openlayers/dist/components/sources';
 
 let location: Coordinate = [-80.46610037619588,43.39310096168964];
 let mcdLocations = ref<Coordinate[]>([[-80.55875739999999,43.433288499999996], [-80.41385079999999,43.3867925]]);
@@ -15,12 +16,15 @@ const rotation = ref(0);
 const markerIcon = "/logo.png";
 
 onMounted(async () => {
-  let data = await requestMCD(location, 2500); // test_data;
-  let MCDs = [];
-  for(var i = 0; i < data.places.length; i++) {
-    MCDs.push([data.places[i].location.longitude, data.places[i].location.latitude])
-  }
-  mcdLocations.value = MCDs;
+  navigator.geolocation.getCurrentPosition(async pos => {
+    location = [pos.coords.longitude, pos.coords.latitude];
+    let data = await requestMCD(location, 2500); // test_data;
+    let MCDs = [];
+    for(var i = 0; i < data.places.length; i++) {
+      MCDs.push([data.places[i].location.longitude, data.places[i].location.latitude])
+    }
+    mcdLocations.value = MCDs;
+  });
 })
 
 </script>
@@ -49,6 +53,15 @@ onMounted(async () => {
           <ol-geom-point :coordinates="[fromLonLat(mcd)[0], fromLonLat(mcd)[1]]"></ol-geom-point>
           <ol-style>
             <ol-style-icon :src="markerIcon" :scale="0.05"></ol-style-icon>
+          </ol-style>
+        </ol-feature>
+        <ol-feature>
+          <ol-geom-point :coordinates="[fromLonLat(location)[0], fromLonLat(location)[1]]"></ol-geom-point>
+          <ol-style>
+            <ol-style-circle :radius="8">
+              <ol-style-fill color="#036ffc"></ol-style-fill>
+              <ol-style-stroke color="#82b8ff" :width="3"></ol-style-stroke>
+            </ol-style-circle>
           </ol-style>
         </ol-feature>
       </ol-source-vector>
